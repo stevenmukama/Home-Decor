@@ -1,5 +1,12 @@
+import Navbar from './navBar';
+
 function HomePage() {
-	return <div>Homepage</div>;
+	return (
+		<>
+			<Navbar />
+			<h1>HomePage</h1>
+		</>
+	);
 }
 
 export default HomePage;
