@@ -1,22 +1,33 @@
-import { Suspense } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoadingScreen from './components/LoadingScreen';
-import HomePage from './components/HomePage';
+// src/App.js
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
 
-function App() {
+const App = () => {
 	return (
 		<Router>
-			<div className='relative min-h-screen'>
-				<Suspense fallback={<LoadingScreen />}>
-					<Routes>
-						<Route
-							path='/'
-							element={<HomePage />}
-						/>
-					</Routes>
-				</Suspense>
-			</div>
+			<Routes>
+				<Route
+					path='/'
+					element={<HomePage />}
+				/>
+				<Route
+					path='/about'
+					element={<AboutPage />}
+				/>
+				<Route
+					path='/contact'
+					element={<ContactPage />}
+				/>
+				<Route
+					path='/services'
+					element={<ServicesPage />}
+				/>
+			</Routes>
 		</Router>
 	);
-}
+};
+
 export default App;
