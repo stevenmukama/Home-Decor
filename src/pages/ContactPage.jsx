@@ -8,8 +8,8 @@ const ContactPage = () => {
 			<div className='relative z-10'>
 				<PageContent
 					title='Contact Page'
-					nextPage='/services'
-					nextPageText='Go to Services Page'
+					nextPage='/listings'
+					nextPageText='Go to listings'
 				/>
 			</div>
 		</div>
