@@ -1,17 +1,5 @@
-import PageContent from '../components/PageContent';
-
-const ContactPage = () => {
-	return (
-		<div className=''>
-			<div className=''>
-				<PageContent
-					title='Contact Page'
-					nextPage='/listings'
-					nextPageText='Go to listings'
-				/>
-			</div>
-		</div>
-	);
-};
+function ContactPage() {
+	return <div>ContactPage</div>;
+}
 
 export default ContactPage;

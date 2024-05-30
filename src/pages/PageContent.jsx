@@ -31,7 +31,7 @@ const PageContent = ({
 			</div>
 
 			<div className='flex gap-4 mt-8'>
-				{images.map((image, index) => (
+				{images?.map((image, index) => (
 					<Link
 						key={index}
 						to={image.link}
