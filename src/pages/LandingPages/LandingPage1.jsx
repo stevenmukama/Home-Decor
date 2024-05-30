@@ -17,8 +17,8 @@ const LandingPage1 = () => {
 				nextPage='/'
 				nextPageText='Go to About Page'
 				images={images}
-				imageProp={'/aboutItemImg.webp'}
-				color='bg-[#D0C5B8]'
+				imageProp={'/homeItem1Img.webp'}
+				color='bg-[#1F2127]'
 			/>
 		</div>
 	);

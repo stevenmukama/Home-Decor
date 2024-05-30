@@ -14,11 +14,11 @@ const LandingPage2 = () => {
 				title='Chroma Decor'
 				item1='Vibrant homes for every vision'
 				item2='Your ideal space is only a click away!'
-				nextPage='/LandingPage2'
+				nextPage='/LandingPage3'
 				nextPageText='Go to About Page'
 				images={images}
-				imageProp={'/homeItem1Img.webp'}
-				color='bg-[#1F2127]'
+				imageProp={'/aboutItemImg.webp'}
+				color='bg-[#D0C5B8]'
 			/>
 		</div>
 	);
