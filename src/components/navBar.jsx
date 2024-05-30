@@ -1,18 +1,15 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const navItems = [
+const NavItems = [
 	{ name: 'Home', path: '/' },
+	{ name: 'Product', path: '/product' },
 	{ name: 'About Us', path: '/about' },
-	{ name: 'Live Well', path: '/liveWell' },
 	{ name: 'Contact Us', path: '/contactUs' },
-	{ name: 'Testimonials', path: '/testimonials' },
-	{ name: 'Tips', path: '/tips' },
-	{ name: 'Blog', path: '/blog' },
-	{ name: 'Articles', path: '/articles' },
+	{ name: 'Listings', path: '/listings' },
 ];
 
-const Navbar = () => {
+const NavBar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const menuRef = useRef(null);
 
@@ -25,19 +22,19 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='absolute w-[97%] top-5 left-5 right-5 max-md:w-auto'>
-			<div className='flex items-center font-BelloText font-bold text-xs absolute top-0 w-full rounded-[112px] left-0 justify-between p-4 text-[#083201] backdrop-blur-sm bg-white/30 z-40'>
+		<nav className='bg-white max-md:w-auto'>
+			<div className='flex items-center font-BelloText font-bold text-xs w-full justify-between p-4 text-[#083201] z-40'>
 				<img
 					src='/public/decorlogo.svg'
-					className='h-6 w-6'
+					className='w-auto h-auto'
 				/>
 				<div className='items-center justify-center hidden gap-6 min-[1207px]:flex'>
 					<ul className='flex gap-8'>
-						{navItems.map((item) => (
+						{NavItems.map((item) => (
 							<li key={item.path}>
 								<Link
 									to={item.path}
-									className='text-[17px] hover:text-white'>
+									className='text-[17px]  hover:underline hover:underline-offset-8'>
 									{item.name}
 								</Link>
 							</li>
@@ -85,7 +82,7 @@ const Navbar = () => {
 					</svg>
 				</button>
 				<ul className='flex flex-col gap-8 text-2xl'>
-					{navItems.map((item) => (
+					{NavItems.map((item) => (
 						<li key={item.path}>
 							<Link
 								to={item.path}
@@ -119,4 +116,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default NavBar;

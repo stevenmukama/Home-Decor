@@ -4,10 +4,13 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ServicesPage from './pages/ServicesPage';
 import ProductListings from './pages/ProductListings';
+import NavBar from './components/NavBar';
+import ProductPage from './pages/ProductPage';
 
 const App = () => {
 	return (
 		<Router>
+			<NavBar />
 			<Routes>
 				<Route
 					path='/'
@@ -18,8 +21,16 @@ const App = () => {
 					element={<AboutPage />}
 				/>
 				<Route
-					path='/contact'
+					path='/about'
+					element={<AboutPage />}
+				/>
+				<Route
+					path='/contactUs'
 					element={<ContactPage />}
+				/>
+				<Route
+					path='/product'
+					element={<ProductPage />}
 				/>
 				<Route
 					path='/services'
