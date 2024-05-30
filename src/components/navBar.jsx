@@ -1,12 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const NavItems = [
+const navItems = [
 	{ name: 'Home', path: '/' },
-	{ name: 'Product', path: '/product' },
+	{ name: 'Product', path: '/product', imgIcon: '/menuArrow.svg' },
 	{ name: 'About Us', path: '/about' },
-	{ name: 'Contact Us', path: '/contactUs' },
-	{ name: 'Listings', path: '/listings' },
+	{ name: 'Contact', path: '/contactUs' },
 ];
 
 const NavBar = () => {
@@ -21,25 +20,56 @@ const NavBar = () => {
 		setIsMenuOpen(false);
 	};
 
+	useEffect(() => {
+		const handleOutsideClick = (event) => {
+			if (menuRef.current && !menuRef.current.contains(event.target)) {
+				closeMenu();
+			}
+		};
+
+		document.addEventListener('mousedown', handleOutsideClick);
+
+		return () => {
+			document.removeEventListener('mousedown', handleOutsideClick);
+		};
+	}, []);
+
 	return (
-		<nav className='bg-white max-md:w-auto'>
-			<div className='flex items-center font-BelloText font-bold text-xs w-full justify-between p-4 text-[#083201] z-40'>
+		<nav className='fixed w-full max-md:w-auto'>
+			<div className='flex items-center justify-between w-full text-xs font-bold bg-white font-BelloText'>
 				<img
-					src='/public/decorlogo.svg'
+					src='/decorlogo.svg'
 					className='w-auto h-auto'
+					alt='Logo'
 				/>
-				<div className='items-center justify-center hidden gap-6 min-[1207px]:flex'>
+				<div className='items-center justify-evenly hidden gap-6 min-[1207px]:flex'>
 					<ul className='flex gap-8'>
-						{NavItems.map((item) => (
+						{navItems.map((item, index) => (
 							<li key={item.path}>
 								<Link
 									to={item.path}
-									className='text-[17px]  hover:underline hover:underline-offset-8'>
-									{item.name}
+									className='text-[17px] text-gray-700 text-opacity-50 cursor-pointer hover:text-[#353E44] hover:underline hover:underline-offset-8 block mb-1'>
+									{index === 1 ? (
+										<div className='flex items-center gap-2'>
+											<span>{item.name}</span>
+											<img
+												src={item.imgIcon}
+												alt={item.name}
+												className='w-auto h-auto'
+											/>
+										</div>
+									) : (
+										item.name
+									)}
 								</Link>
 							</li>
 						))}
 					</ul>
+					<div className='flex gap-8'>
+						<div className='py-8 rounded-lg bg-slate-900' />
+						<img src='/personIcon.svg' />
+						<img src='/shoppingBagIcon.svg' />
+					</div>
 				</div>
 				<div className='flex items-center min-[1207px]:hidden'>
 					<button onClick={toggleMenu}>
@@ -82,27 +112,38 @@ const NavBar = () => {
 					</svg>
 				</button>
 				<ul className='flex flex-col gap-8 text-2xl'>
-					{NavItems.map((item) => (
+					{navItems.map((item, index) => (
 						<li key={item.path}>
 							<Link
 								to={item.path}
 								onClick={closeMenu}
 								className='hover:text-gray-400'>
-								{item.name}
+								{index === 2 ? (
+									<div className='flex items-center gap-2'>
+										<span>{item.name}</span>
+										<img
+											src={item.imgIcon}
+											alt={item.name}
+											className='w-auto h-auto'
+										/>
+									</div>
+								) : (
+									item.name
+								)}
 							</Link>
 						</li>
 					))}
 					<Link
 						to='/signup'
 						onClick={closeMenu}
-						className='mt-8 '>
+						className='block mt-8'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
 							viewBox='0 0 24 24'
 							strokeWidth={1.5}
 							stroke='currentColor'
-							className='size-8'>
+							className='w-8 h-8'>
 							<path
 								strokeLinecap='round'
 								strokeLinejoin='round'

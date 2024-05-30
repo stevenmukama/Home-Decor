@@ -2,12 +2,14 @@ import PageContent from '../components/PageContent';
 
 const AboutPage = () => {
 	return (
-		<div className='relative min-h-screen'>
-			<div className='relative z-10'>
+		<div className=''>
+			<div className=''>
 				<PageContent
-					title='About Page'
-					nextPage='/contact'
-					nextPageText='Go to Contact Page'
+					title='Chroma Decor'
+					item1='this is the about page'
+					imageProp='/homeItem1Img.png'
+					nextPage='/about'
+					nextPageText='Go to About Page'
 				/>
 			</div>
 		</div>

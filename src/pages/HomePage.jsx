@@ -2,12 +2,15 @@ import PageContent from '../components/PageContent';
 
 const HomePage = () => {
 	return (
-		<div className='relative min-h-screen'>
-			<div className='relative z-10'>
+		<div className=''>
+			<div className=''>
 				<PageContent
-					title='Home Page'
+					title='Chroma Decor'
+					item1='Vibrant homes for every vision'
+					imageProp='/homeItem1Img.png'
 					nextPage='/about'
 					nextPageText='Go to About Page'
+					color='bg-[#1F2127]'
 				/>
 			</div>
 		</div>

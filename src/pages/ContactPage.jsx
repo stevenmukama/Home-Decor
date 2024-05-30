@@ -2,8 +2,8 @@ import PageContent from '../components/PageContent';
 
 const ContactPage = () => {
 	return (
-		<div className='relative min-h-screen'>
-			<div className='relative z-10'>
+		<div className=''>
+			<div className=''>
 				<PageContent
 					title='Contact Page'
 					nextPage='/listings'

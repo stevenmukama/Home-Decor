@@ -2,8 +2,8 @@ import PageContent from '../components/PageContent';
 
 const ServicesPage = () => {
 	return (
-		<div className='relative min-h-screen'>
-			<div className='relative z-10'>
+		<div className=''>
+			<div className=''>
 				<PageContent
 					title='Services Page'
 					nextPage='/'
