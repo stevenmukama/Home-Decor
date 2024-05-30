@@ -1,19 +1,19 @@
 import PageContent from '../components/PageContent';
+import ColoredSvg from '../components/ColoredSvg';
 
-function HomePage() {
+const HomePage = () => {
 	return (
-		<>
-			<h1>HomePage</h1>
-
-			<PageContent
-				className='bg-blue-500'
-				title='Home Page'
-				color='bg-blue-500'
-				nextPage='/about'
-				nextPageText='Go to About Page'
-			/>
-		</>
+		<div className='relative min-h-screen'>
+			<ColoredSvg color='#1F2127' />
+			<div className='relative z-10'>
+				<PageContent
+					title='Home Page'
+					nextPage='/about'
+					nextPageText='Go to About Page'
+				/>
+			</div>
+		</div>
 	);
-}
+};
 
 export default HomePage;

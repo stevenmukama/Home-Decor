@@ -1,15 +1,18 @@
-// src/pages/ServicesPage.js
+import ColoredSvg from '../components/ColoredSvg';
 import PageContent from '../components/PageContent';
 
 const ServicesPage = () => {
 	return (
-		<PageContent
-			className='bg-yellow-500'
-			title='Services Page'
-			color='bg-yellow-500'
-			nextPage='/'
-			nextPageText='Go to Home Page'
-		/>
+		<div className='relative min-h-screen'>
+			<ColoredSvg color='#FFFF00' />
+			<div className='relative z-10'>
+				<PageContent
+					title='Services Page'
+					nextPage='/'
+					nextPageText='Go to Home Page'
+				/>
+			</div>
+		</div>
 	);
 };
 
