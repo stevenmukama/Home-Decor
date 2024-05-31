@@ -3,24 +3,24 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   return (
     <footer className="py-4 text-gray-800">
-      <div className="flex bg-gray-500">
-        <div className="flex items-center justify-center flex-1 text-3xl text-white">
+      <div className="flex flex-col md:flex-row bg-gray-500 p-4 md:p-0 !py-2">
+        <div className="flex items-center justify-center flex-1 text-2xl md:text-3xl text-white mb-4 md:mb-0">
           <p>Get notified for New arrivals</p>
         </div>
-        <div className="flex flex-col items-center justify-center flex-1 gap-2 p-4">
+        <div className="flex flex-col items-center justify-center flex-1 gap-2">
           <input
             type="text"
             placeholder="Your email"
-            className="px-8 py-1 font-bold w-72"
+            className="px-4 py-2 font-bold w-full md:w-72"
           />
-          <span className="px-10 py-1 font-bold text-center text-white bg-orange-600 rounded-lg text-md w-fit">
+          <span className="px-6 py-2 font-bold text-center text-white bg-orange-600 rounded-lg text-md w-full md:w-fit">
             Subscribe
           </span>
         </div>
       </div>
-      <div className="container px-4 mx-auto my-8">
-        <div className="flex justify-between">
-          <div>
+      <div className="container px-4 mx-auto my-8 py-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="flex justify-center md:justify-start">
             <img src="/assets/Logo place.svg" alt="logo" className="w-48" />
           </div>
           <div>
@@ -73,13 +73,13 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="mb-2 font-bold">Subscribe</h3>
-            <form className="flex items-center justify-center">
+            <form className="flex items-center justify-center gap-2">
               <input
                 type="email"
                 placeholder="Your email"
                 className="w-full p-2 rounded"
               />
-              <button className="flex items-center justify-center px-1 py-2 bg-gray-800 rounded-e-lg">
+              <button className="flex items-center justify-center px-3 py-2 bg-gray-800 rounded-lg">
                 <ArrowRightIcon className="w-6 h-6 text-white" />
               </button>
             </form>

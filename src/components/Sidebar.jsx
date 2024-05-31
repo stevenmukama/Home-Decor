@@ -10,8 +10,9 @@ const Sidebar = () => {
     const queryParams = new URLSearchParams(location.search);
     setMainCateg(queryParams.get("mainCateg"));
   }, [location]);
+
   return (
-    <aside className="lg:w-96 w-64 bg-gray-50">
+    <aside className="lg:w-96 w-full bg-gray-50">
       <h2 className="lg:px-8 md:px-4 px-2 py-8 mb-4 lg:text-6xl md:text-4xl text-xl font-semibold">
         Categories
       </h2>
@@ -19,7 +20,7 @@ const Sidebar = () => {
         <div key={category.name}>
           <div className="lg:px-8 md:px-4 px-2 my-4">
             <Link
-              className={`lg:text-4xl md:text-2xl font-bold ${
+              className={`lg:text-4xl md:text-2xl text-xl font-bold ${
                 category.name === mainCateg ? "text-red-500" : "text-gray-500"
               } hover:underline`}
               to={`?mainCateg=${category.name}`}
@@ -28,7 +29,7 @@ const Sidebar = () => {
             </Link>
             {category.name === mainCateg && (
               <div className="border-b border-red-500 mt-3 relative">
-                <span className="absolute  -top-0.5 bg-red-500 w-1 h-1 rounded-full block"></span>
+                <span className="absolute -top-0.5 bg-red-500 w-1 h-1 rounded-full block"></span>
               </div>
             )}
           </div>
@@ -36,7 +37,7 @@ const Sidebar = () => {
             {category.options.map((option) => (
               <Link
                 key={option}
-                className="lg:px-8 md:px-4 py-4 font-bold text-gray-400 border-b border-gray-300 text-md hover:underline"
+                className="lg:px-8 md:px-4 px-2 py-4 font-bold text-gray-400 border-b border-gray-300 text-md hover:underline"
                 to={`?mainCateg=${category.name}&subCateg=${option}`}
               >
                 {option}

@@ -1,35 +1,47 @@
 /* eslint-disable react/prop-types */
-import {
-	ChevronRightIcon,
-	ChevronLeftIcon,
-} from '@heroicons/react/24/solid';
+import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-	const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-	return (
-		<nav>
-			<ul className='flex gap-12 text-lg font-bold pagination'>
-				<ChevronLeftIcon className='w-6 hover:text-red-500' />
-				{pages.map((page) => (
-					<li
-						key={page}
-						className={
-							page === currentPage
-								? 'page-item active text-red-500'
-								: 'page-item text-gray-850 hover:text-red-400'
-						}>
-						<button
-							className='page-link'
-							onClick={() => onPageChange(page)}>
-							{page}
-						</button>
-					</li>
-				))}
-				<ChevronRightIcon className='w-6 hover:text-red-500' />
-			</ul>
-		</nav>
-	);
+  return (
+    <nav>
+      <ul className="flex flex-wrap justify-center gap-2 md:gap-4 text-base md:text-lg font-bold pagination">
+        <li>
+          <button
+            className="page-link flex items-center hover:text-red-500"
+            onClick={() => onPageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            <ChevronLeftIcon className="w-4 md:w-6" />
+          </button>
+        </li>
+        {pages.map((page) => (
+          <li
+            key={page}
+            className={`page-item ${
+              page === currentPage
+                ? "text-red-500"
+                : "text-gray-850 hover:text-red-400"
+            }`}
+          >
+            <button className="page-link px-2" onClick={() => onPageChange(page)}>
+              {page}
+            </button>
+          </li>
+        ))}
+        <li>
+          <button
+            className="page-link flex items-center hover:text-red-500"
+            onClick={() => onPageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            <ChevronRightIcon className="w-4 md:w-6" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Pagination;
