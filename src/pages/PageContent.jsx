@@ -20,6 +20,7 @@ const PageContent = ({
 	textCard1,
 	numberColor1,
 	buttonColor2,
+	bgColor2,
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
@@ -106,20 +107,20 @@ const PageContent = ({
 					<img src='/public/arrowIcon.svg' />{' '}
 				</div>
 			</button>{' '}
-			<div className='py-8'>
-				<h1 className='text-4xl font-bold text-center'>
+			<div className={`${bgColor2} py-8`}>
+				<h1 className='text-4xl font-bold text-center text-white'>
 					What our clients says
 				</h1>
-				<div className='flex gap-8'>
-					<div>
+				<div className='flex gap-8 text-2xl'>
+					<div className='px-10 py-10 mx-auto text-center bg-white'>
 						<img src='/Vector.svg' />
-						<h1>
+						<h1 className='px-6'>
 							Torem ipsum dolor sit amet, consectetur adipiscing elit.
 						</h1>
 					</div>
-					<div>
+					<div className='px-10 py-10 bg-white'>
 						<img src='/Vector.svg' />
-						<h1>
+						<h1 className='px-6'>
 							Torem ipsum dolor sit amet, consectetur adipiscing elit.
 						</h1>
 					</div>
@@ -149,6 +150,7 @@ PageContent.propTypes = {
 	textCard1: PropTypes.string,
 	numberColor1: PropTypes.string,
 	buttonColor2: PropTypes.string,
+	bgColor2: PropTypes.string,
 };
 
 export default PageContent;
