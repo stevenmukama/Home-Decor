@@ -138,7 +138,7 @@ const PageContent = ({
 					</div>
 				</div>
 				<div className='flex justify-between'>
-					<div className='flex gap-4 px-8 mt-8 text-white'>
+					<div className='flex gap-4 px-8 mt-8 text-white max-md:flex-col'>
 						<div className={`${bgColor3} w-fit rounded-full`}>
 							<img
 								src='/profile-circle.svg'
@@ -150,7 +150,7 @@ const PageContent = ({
 							<p className='text-sm'>Designer</p>
 						</div>
 					</div>
-					<div className='flex gap-4 px-8 mt-8 text-white'>
+					<div className='flex gap-4 px-8 mt-8 text-white max-md:flex-col'>
 						<div className={`${bgColor3} w-fit rounded-full`}>
 							<img
 								src='/profile-circle.svg'

@@ -48,7 +48,7 @@ const FooterItem = ({ FooterItemColor }) => (
 						key={index}
 						className='max-md:py-3'>
 						<h3 className='mb-2 font-bold'>{section.title}</h3>
-						<ul>
+						<ul className=' max-md:flex max-md:gap-2'>
 							{section.links.map((link, linkIndex) => (
 								<li key={linkIndex}>
 									<Link
