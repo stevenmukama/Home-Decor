@@ -13,6 +13,7 @@ const PageContent = ({
 	item1,
 	imageProp,
 	color,
+	headerTextColor,
 	item2,
 	images,
 	alt,
@@ -28,12 +29,12 @@ const PageContent = ({
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
-			<div className={`gap-10 py-8 ${color} px-8`}>
-				<h1 className='mb-4 py-12 text-4xl md:text-[90px] font-bold text-white'>
+			<div className={`gap-10 py-8 ${color} ${headerTextColor} px-8`}>
+				<h1 className='mb-4 py-12 text-4xl md:text-[90px] font-bold'>
 					{title}
 				</h1>
-				<p className='mb-4 text-lg text-white md:text-xl'>{item1}</p>
-				<p className='mb-4 text-lg text-white md:text-xl'>{item2}</p>
+				<p className='mb-4 text-lg md:text-xl'>{item1}</p>
+				<p className='mb-4 text-lg md:text-xl'>{item2}</p>
 			</div>
 			<div className='absolute top-[-81px] right-0 z-40 px-8'>
 				<img
@@ -218,6 +219,7 @@ PageContent.propTypes = {
 	bgColor3: PropTypes.string,
 	subscribeBgColor1: PropTypes.string,
 	FooterItemColor: PropTypes.string,
+	headerTextColor: PropTypes.string,
 };
 
 export default PageContent;
