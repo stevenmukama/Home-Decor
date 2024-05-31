@@ -108,7 +108,7 @@ const PageContent = ({
 				</div>
 			</button>{' '}
 			<div className={`${bgColor2} py-8`}>
-				<h1 className='text-4xl font-bold text-center text-white'>
+				<h1 className='mb-8 text-4xl font-bold text-center text-white'>
 					What our clients says
 				</h1>
 				<div className='flex gap-8 text-2xl'>
