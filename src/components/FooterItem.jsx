@@ -35,7 +35,7 @@ const socialIcons = [
 const FooterItem = ({ FooterItemColor }) => (
 	<div>
 		<div className='container px-4 mx-auto my-8 mt-8 shadow-black'>
-			<div className='flex justify-between'>
+			<div className='flex items-center justify-between max-md:flex-col max-md:text-center'>
 				<div>
 					<img
 						src='/assets/Logo place.svg'
@@ -44,7 +44,9 @@ const FooterItem = ({ FooterItemColor }) => (
 					/>
 				</div>
 				{footerSections.map((section, index) => (
-					<div key={index}>
+					<div
+						key={index}
+						className='max-md:py-3'>
 						<h3 className='mb-2 font-bold'>{section.title}</h3>
 						<ul>
 							{section.links.map((link, linkIndex) => (
