@@ -155,13 +155,13 @@ const PageContent = ({
 					<div />
 				</div>
 			</div>
-			<div className='flex gap-8 px-8 text-center '>
+			<div className='flex gap-8 mb-8'>
 				<img
 					src='/emailImg.png'
 					className=''
 				/>
-				<div className='flex-col items-center justify-center pt-8'>
-					<h1 className='block mx-auto text-2xl font-bold'>
+				<div className='flex-col items-center justify-center w-1/2 pt-8 text-center'>
+					<h1 className='block mx-auto text-4xl font-bold'>
 						Enter E-mail to get 20% off
 					</h1>
 					<div className='px-8 py-2 bg-[#D9D9D9] flex gap-2 w-full rounded-lg mt-8'>
