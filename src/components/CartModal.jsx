@@ -11,7 +11,10 @@ const CartModal = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-10 flex items-start justify-end bg-black bg-opacity-50">
+    <div
+      className="fixed inset-0 flex items-start justify-end bg-black bg-opacity-50"
+      style={{ zIndex: 60 }}
+    >
       <div className="relative w-full max-w-sm p-4 bg-white rounded-lg">
         <button
           className="absolute text-gray-700 top-2 right-2 text-5xl"
