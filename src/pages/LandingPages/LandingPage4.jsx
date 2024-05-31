@@ -20,7 +20,7 @@ const LandingPage4 = () => {
 				imageProp={'/imagelink4.webp'}
 				color='bg-[#E7E3E1]'
 				buttonColor1='bg-[#978F89]'
-				bgColor1='bg-[#978F89]'
+				bgColor1='bg-[#E7E3E1]'
 				textCard1='text-[#7B7979]'
 				numberColor1='text-[#96806C]'
 				buttonColor2='bg-[#8B7E77]'
