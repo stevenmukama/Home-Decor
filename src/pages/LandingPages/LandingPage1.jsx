@@ -26,6 +26,7 @@ const LandingPage1 = () => {
 				buttonColor2='bg-[#43535B]'
 				bgColor2='bg-[#43535B]'
 				bgColor3='bg-[#CF6E37]'
+				subscribeBgColor1='bg-[#43535B]'
 			/>
 		</div>
 	);

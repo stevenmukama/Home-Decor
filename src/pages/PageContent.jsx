@@ -22,6 +22,7 @@ const PageContent = ({
 	buttonColor2,
 	bgColor2,
 	bgColor3,
+	subscribeBgColor1,
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
@@ -151,7 +152,30 @@ const PageContent = ({
 							<p className='text-sm'>Designer</p>
 						</div>
 					</div>
+					<div />
 				</div>
+			</div>
+			<div className='flex gap-8 px-8 text-center '>
+				<img
+					src='/emailImg.png'
+					className=''
+				/>
+				<div>
+					<h1 className='text-2xl font-bold'>
+						Enter E-mail to get 20% off
+					</h1>
+				</div>
+				<div className='px-8 py-2 bg-[#D9D9D9] flex gap-2 h-fit rounded-lg'>
+					<img
+						src='/public/sms.svg'
+						className='w-[51px] h-[51px]'
+					/>
+					<p className='text-[32px] text-[#7A7878]'> Your email</p>
+				</div>
+				<button
+					className={`px-10 py-3 rounded-lg text-white ${subscribeBgColor1} font-bold `}>
+					Subscribe{' '}
+				</button>
 			</div>
 		</div>
 	);
@@ -179,6 +203,7 @@ PageContent.propTypes = {
 	buttonColor2: PropTypes.string,
 	bgColor2: PropTypes.string,
 	bgColor3: PropTypes.string,
+	subscribeBgColor1: PropTypes.string,
 };
 
 export default PageContent;
