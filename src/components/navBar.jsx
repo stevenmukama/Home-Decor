@@ -42,8 +42,8 @@ const NavBar = () => {
 					className='w-auto h-auto'
 					alt='Logo'
 				/>
-				<div className='items-center justify-evenly hidden gap-6 min-[1207px]:flex pr-10'>
-					<ul className='flex gap-8'>
+				<div className='items-center justify-around hidden gap-10 min-[1207px]:flex pr-10'>
+					<ul className='flex gap-10'>
 						{navItems.map((item, index) => (
 							<li key={item.path}>
 								<Link
@@ -80,6 +80,7 @@ const NavBar = () => {
 						/>
 					</div>
 				</div>
+				<div />
 				<div className='flex items-center min-[1207px]:hidden'>
 					<button onClick={toggleMenu}>
 						<svg
@@ -130,11 +131,6 @@ const NavBar = () => {
 								{index === 2 ? (
 									<div className='flex items-center gap-2'>
 										<span>{item.name}</span>
-										{/* <img
-                      src={item.imgIcon}
-                      alt={item.name}
-                      className="w-auto h-auto"
-                    /> */}
 									</div>
 								) : (
 									item.name
