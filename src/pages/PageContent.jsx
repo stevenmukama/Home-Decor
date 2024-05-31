@@ -160,22 +160,25 @@ const PageContent = ({
 					src='/emailImg.png'
 					className=''
 				/>
-				<div>
-					<h1 className='text-2xl font-bold'>
+				<div className='flex-col items-center justify-center pt-8'>
+					<h1 className='block mx-auto text-2xl font-bold'>
 						Enter E-mail to get 20% off
 					</h1>
+					<div className='px-8 py-2 bg-[#D9D9D9] flex gap-2 w-full rounded-lg mt-8'>
+						<img
+							src='/public/sms.svg'
+							className='w-[51px] h-[51px]'
+						/>
+						<p className='text-[32px] font-bold text-[#7A7878]'>
+							{' '}
+							Your email
+						</p>
+					</div>
+					<button
+						className={`px-10 py-3 rounded-lg text-white mt-8 ${subscribeBgColor1} font-bold `}>
+						Subscribe{' '}
+					</button>
 				</div>
-				<div className='px-8 py-2 bg-[#D9D9D9] flex gap-2 h-fit rounded-lg'>
-					<img
-						src='/public/sms.svg'
-						className='w-[51px] h-[51px]'
-					/>
-					<p className='text-[32px] text-[#7A7878]'> Your email</p>
-				</div>
-				<button
-					className={`px-10 py-3 rounded-lg text-white ${subscribeBgColor1} font-bold `}>
-					Subscribe{' '}
-				</button>
 			</div>
 		</div>
 	);
