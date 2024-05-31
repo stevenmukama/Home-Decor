@@ -116,7 +116,7 @@ const PageContent = ({
 				className={`px-8 py-4 block text-xl md:text-[36px] rounded-lg mb-8 mx-auto mt-8 ${buttonColor2} text-white font-bold rounded w-fit`}>
 				<div className='flex gap-2'>
 					Shop
-					<img src='/public/arrowIcon.svg' />
+					<img src='/arrowIcon.svg' />
 				</div>
 			</button>
 			<div className={`${bgColor2} py-8 mb-8`}>
