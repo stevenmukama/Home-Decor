@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ProductListings from './pages/ProductListings';
-import NavBar from './components/NavBar';
+import NavBar from './components/navBar';
 import ProductPage from './pages/ProductPage';
 import LandingPage1 from './pages/LandingPages/LandingPage1';
 import LandingPage2 from './pages/LandingPages/LandingPage2';
