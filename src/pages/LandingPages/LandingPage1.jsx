@@ -19,6 +19,8 @@ const LandingPage1 = () => {
 				images={images}
 				imageProp={'/homeItem1Img.webp'}
 				color='bg-[#1F2127]'
+				buttonColor1='bg-[#DF8C5D]'
+				bgColor1='bg-[#1F2127]'
 			/>
 		</div>
 	);

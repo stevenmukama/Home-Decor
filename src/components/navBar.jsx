@@ -35,7 +35,7 @@ const NavBar = () => {
 	}, []);
 
 	return (
-		<nav className='fixed w-full max-md:w-auto'>
+		<nav className='fixed z-40 w-full max-md:w-auto'>
 			<div className='flex items-center justify-between w-full text-xs font-bold bg-white font-BelloText'>
 				<img
 					src='/decorlogo.svg'
