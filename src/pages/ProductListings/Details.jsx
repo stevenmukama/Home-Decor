@@ -61,21 +61,21 @@ const ProductDetailsPage = () => {
       <div className="flex gap-16">
         <div className="flex flex-col mr-4 gap-4">
           <img
-            src="/src/assets/decorative/candle.svg"
+            src="/assets/decorative/candle.svg"
             className="w-36 h-40 object-cover"
           />
           <img
-            src="/src/assets/decorative/candle.svg"
+            src="/assets/decorative/candle.svg"
             alt="Product thumbnail 2"
             className="w-36 h-40 object-cover"
           />
           <img
-            src="/src/assets/decorative/candle.svg"
+            src="/assets/decorative/candle.svg"
             alt="Product thumbnail 3"
             className="w-36 h-40 object-cover"
           />
           <img
-            src="/src/assets/decorative/candle.svg"
+            src="/assets/decorative/candle.svg"
             alt="Product thumbnail 4"
             className="w-36 h-40 object-cover"
           />
@@ -83,7 +83,7 @@ const ProductDetailsPage = () => {
         <div className="flex-1 px-10">
           <div className="flex-row flex gap-16">
             <img
-              src="/src/assets/decorative/candle.svg"
+              src="/assets/decorative/candle.svg"
               alt="Main Product"
               className="w-96 h-96 object-cover mb-4"
             />
@@ -100,7 +100,9 @@ const ProductDetailsPage = () => {
                       key={color}
                       onClick={() => handleColorChange(color)}
                       className={`block w-4 h-4 rounded-full mr-2 cursor-pointer ${
-                        selectedColor === color ? "border-2 border-gray-600" : ""
+                        selectedColor === color
+                          ? "border-2 border-gray-600"
+                          : ""
                       }`}
                       style={{ backgroundColor: color }}
                     ></span>

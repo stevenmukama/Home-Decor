@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container px-4 mx-auto my-8">
         <div className="flex justify-between">
           <div>
-            <img src="/src/assets/Logo place.svg" alt="logo" className="w-48" />
+            <img src="/assets/Logo place.svg" alt="logo" className="w-48" />
           </div>
           <div>
             <h3 className="mb-2 font-bold">Product</h3>
@@ -87,15 +87,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-gray-500 flex justify-center gap-4 py-2">
-        <img
-          src="/src/assets/Google.svg"
-          className="bg-white p-2 rounded-full"
-        />
-        <img src="/src/assets/IG.svg" className="bg-white p-2 rounded-full" />
-        <img
-          src="/src/assets/Behance.svg"
-          className="bg-white p-2 rounded-full"
-        />
+        <img src="/assets/Google.svg" className="bg-white p-2 rounded-full" />
+        <img src="/assets/IG.svg" className="bg-white p-2 rounded-full" />
+        <img src="/assets/Behance.svg" className="bg-white p-2 rounded-full" />
       </div>
     </footer>
   );

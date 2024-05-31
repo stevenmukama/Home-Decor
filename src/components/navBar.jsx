@@ -64,9 +64,9 @@ const NavBar = () => {
           </ul>
           <div className="flex gap-2 items-center">
             <Link to={"/signup"}>
-              <img src="/src/assets/tosignup.svg" alt="" className="w-5" />
+              <img src="/assets/tosignup.svg" alt="" className="w-5" />
             </Link>
-            <img src="/src/assets/shopfull.svg" alt="" className="w-5" />
+            <img src="/assets/shopfull.svg" alt="" className="w-5" />
           </div>
         </div>
         <div className="flex items-center min-[1207px]:hidden">
