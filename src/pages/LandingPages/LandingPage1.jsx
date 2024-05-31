@@ -27,6 +27,7 @@ const LandingPage1 = () => {
 				bgColor2='bg-[#43535B]'
 				bgColor3='bg-[#CF6E37]'
 				subscribeBgColor1='bg-[#43535B]'
+				FooterItemColor='bg-[#43535B]'
 			/>
 		</div>
 	);
