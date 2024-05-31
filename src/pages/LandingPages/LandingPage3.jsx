@@ -18,7 +18,16 @@ const LandingPage3 = () => {
 				nextPageText='Go to About Page'
 				images={images}
 				imageProp={'/ItemImg3.webp'}
-				color='bg-[#EFD3B9]'
+				color='bg-[#D0C5B8]'
+				buttonColor1='bg-[#95775C]'
+				bgColor1='bg-[#D0C5B8]'
+				textCard1='text-[#8B7E77]'
+				numberColor1='text-[#8B7E77]'
+				buttonColor2='bg-[#927564]'
+				bgColor2='bg-[#D0C5B8]'
+				bgColor3='bg-[#D0C5B8]'
+				subscribeBgColor1='bg-[#927564]'
+				FooterItemColor='bg-[#927564]'
 			/>
 		</div>
 	);
