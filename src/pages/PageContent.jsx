@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import FooterItem from '../components/FooterItem';
 
 const cards = [
 	{ title: 'Clients', content: '10+' },
@@ -106,7 +107,7 @@ const PageContent = ({
 				className={`px-8 py-4 block text-[36px] rounded-lg mb-8 mx-auto mt-8 ${buttonColor2}  text-white font-bold rounded w-fit`}>
 				<div className='flex gap-2'>
 					Shop
-					<img src='/public/arrowIcon.svg' />{' '}
+					<img src='/arrowIcon.svg' />{' '}
 				</div>
 			</button>{' '}
 			<div className={`${bgColor2} py-8 mb-8`}>
@@ -131,7 +132,7 @@ const PageContent = ({
 					<div className='flex gap-4 px-8 mt-8 text-white'>
 						<div className={`${bgColor3} w-fit rounded-full`}>
 							<img
-								src='/public/profile-circle.svg'
+								src='/profile-circle.svg'
 								className='w-16 p-1'
 							/>
 						</div>
@@ -143,7 +144,7 @@ const PageContent = ({
 					<div className='flex gap-4 px-8 mt-8 text-white'>
 						<div className={`${bgColor3} w-fit rounded-full`}>
 							<img
-								src='/public/profile-circle.svg'
+								src='/profile-circle.svg'
 								className='w-16 p-1'
 							/>
 						</div>
@@ -166,7 +167,7 @@ const PageContent = ({
 					</h1>
 					<div className='px-8 py-2 bg-[#D9D9D9] flex gap-2 w-full rounded-lg mt-8'>
 						<img
-							src='/public/sms.svg'
+							src='/sms.svg'
 							className='w-[51px] h-[51px]'
 						/>
 						<p className='text-[32px] font-bold text-[#7A7878]'>
@@ -180,6 +181,7 @@ const PageContent = ({
 					</button>
 				</div>
 			</div>
+			<FooterItem />
 		</div>
 	);
 };
