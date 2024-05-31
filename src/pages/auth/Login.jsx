@@ -10,13 +10,13 @@ const LoginPage = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      navigate("/success");
+      navigate("/");
     }, 2000); // Simulate a login delay
   };
 
   return (
     <div
-      className="flex justify-center items-center h-screen bg-gray-100"
+      className="flex justify-center items-center min-h-screen bg-gray-100 pt-12"
       style={{
         backgroundImage: "url('/src/assets/bg.svg')",
         backgroundSize: "cover",
@@ -24,8 +24,8 @@ const LoginPage = () => {
       }}
     >
       <Helmet title="Login" />
-      <div className="flex bg-white rounded-lg shadow-lg bg-opacity-50">
-        <div className="p-24 flex flex-col justify-center items-center rounded-l-lg">
+      <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg bg-opacity-50 w-full max-w-4xl">
+        <div className="p-8 md:p-24 flex flex-col justify-center items-center rounded-t-lg md:rounded-l-lg md:rounded-t-none">
           <h2 className="text-2xl text-gray-600 font-bold mb-4">
             Log in to your account
           </h2>
@@ -44,20 +44,20 @@ const LoginPage = () => {
             />
           </div>
           <p className="text-gray-400 my-4">Or use other accounts</p>
-          <div className="relative mb-2">
+          <div className="relative mb-2 w-full">
             <img src="/src/assets/mail.svg" className="absolute top-2 left-4" />
             <input
               type="email"
               placeholder="Email"
-              className="py-1 px-2 pl-10 w-full border rounded"
+              className="py-2 px-4 pl-12 w-full border rounded"
             />
           </div>
-          <div className="relative mb-2">
+          <div className="relative mb-2 w-full">
             <img src="/src/assets/lock.svg" className="absolute top-2 left-4" />
             <input
               type="password"
               placeholder="Password"
-              className="py-1 px-2 pl-10 w-full border rounded"
+              className="py-2 px-4 pl-12 w-full border rounded"
             />
           </div>
           <a href="#" className="text-gray-600 my-4">
@@ -71,10 +71,10 @@ const LoginPage = () => {
             {loading ? "Loading..." : "LOG IN"}
           </button>
         </div>
-        <div className="p-24 bg-black bg-opacity-80 text-white rounded-r-lg flex flex-col justify-center items-center">
+        <div className="p-8 md:p-24 bg-black bg-opacity-80 text-white rounded-b-lg md:rounded-r-lg md:rounded-b-none flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-4">New here?</h2>
           <div className="border-b border-white mt-3 relative w-full">
-            <span className="absolute  -top-0.5 bg-white w-1 h-1 rounded-full block"></span>
+            <span className="absolute -top-0.5 bg-white w-1 h-1 rounded-full block"></span>
           </div>
           <span className="mt-4 px-12 py-2 hover:bg-gray-800 border border-gray-200 text-white text-sm rounded-3xl">
             <Link to="/signup">SIGN UP</Link>
