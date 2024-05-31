@@ -18,7 +18,7 @@ const LoginPage = () => {
     <div
       className="flex justify-center items-center min-h-screen bg-gray-100 pt-12"
       style={{
-        backgroundImage: "url('/src/assets/bg.svg')",
+        backgroundImage: "url('/assets/bg.svg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
@@ -31,21 +31,21 @@ const LoginPage = () => {
           </h2>
           <div className="flex justify-center gap-4 py-2">
             <img
-              src="/src/assets/Google.svg"
+              src="/assets/Google.svg"
               className="bg-gray-300 p-2 rounded-full"
             />
             <img
-              src="/src/assets/IG.svg"
+              src="/assets/IG.svg"
               className="bg-gray-300 p-2 rounded-full"
             />
             <img
-              src="/src/assets/Behance.svg"
+              src="/assets/Behance.svg"
               className="bg-gray-300 p-2 rounded-full"
             />
           </div>
           <p className="text-gray-400 my-4">Or use other accounts</p>
           <div className="relative mb-2 w-full">
-            <img src="/src/assets/mail.svg" className="absolute top-2 left-4" />
+            <img src="/assets/mail.svg" className="absolute top-2 left-4" />
             <input
               type="email"
               placeholder="Email"
@@ -53,7 +53,7 @@ const LoginPage = () => {
             />
           </div>
           <div className="relative mb-2 w-full">
-            <img src="/src/assets/lock.svg" className="absolute top-2 left-4" />
+            <img src="/assets/lock.svg" className="absolute top-2 left-4" />
             <input
               type="password"
               placeholder="Password"
