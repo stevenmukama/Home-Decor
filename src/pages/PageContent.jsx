@@ -110,13 +110,19 @@ const PageContent = ({
 				<h1 className='text-4xl font-bold text-center'>
 					What our clients says
 				</h1>
-				<div>
-					<img src='/Vector.svg' />
-					<h1>Torem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-				</div>
-				<div>
-					<img src='/Vector.svg' />
-					<h1>Torem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+				<div className='flex gap-8'>
+					<div>
+						<img src='/Vector.svg' />
+						<h1>
+							Torem ipsum dolor sit amet, consectetur adipiscing elit.
+						</h1>
+					</div>
+					<div>
+						<img src='/Vector.svg' />
+						<h1>
+							Torem ipsum dolor sit amet, consectetur adipiscing elit.
+						</h1>
+					</div>
 				</div>
 			</div>
 		</div>
