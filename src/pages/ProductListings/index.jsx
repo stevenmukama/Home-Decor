@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Sidebar from "../../components/Sidebar";
 import ProductCard from "../../components/ProductCard";
 import Footer from "../../components/Footer";
@@ -25,8 +25,10 @@ const Listings = () => {
   );
   const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState(productCategories[0]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const location = useLocation();
+  const sidebarRef = useRef(null);
   const [subCateg, setSubCateg] = useState(null);
 
   useEffect(() => {
@@ -70,6 +72,28 @@ const Listings = () => {
     );
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        closeSidebar();
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet title="Products" />
@@ -80,10 +104,18 @@ const Listings = () => {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
       />
+      <button
+        className="lg:hidden fixed top-24 left-4 z-50 px-4 py-1 bg-orange-800 text-white rounded"
+        onClick={toggleSidebar}
+      >
+        Filter products
+      </button>
       <div className="relative flex flex-col lg:flex-row">
         <div className="flex flex-col items-start justify-between flex-1 p-4 lg:p-12">
-          <div className="flex flex-col justify-between flex-1">
-            <h2 className="text-2xl lg:text-3xl font-bold">{category.name}</h2>
+          <div className="flex flex-col justify-between flex-1 pt-28">
+            <h2 className="text-2xl lg:text-3xl font-bold text-black">
+              {category.name}
+            </h2>
             <h3 className="font-bold text-4xl lg:text-7xl">{sortedBy}</h3>
           </div>
 
@@ -101,7 +133,17 @@ const Listings = () => {
         </div>
       </div>
       <div className="flex flex-1 flex-col lg:flex-row">
-        <Sidebar activeCategory={productCategories} />
+        <div
+          ref={sidebarRef}
+          className={`fixed top-0 left-0 w-full h-full bg-white lg:bg-transparent lg:relative z-50 transition-transform transform lg:translate-x-0 ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:w-auto lg:h-auto lg:transform-none`}
+        >
+          <Sidebar
+            activeCategory={productCategories}
+            closeSidebar={closeSidebar}
+          />
+        </div>
         <main className="flex-1 p-4">
           <div className="flex flex-col md:flex-row justify-end gap-4 md:gap-8 my-12">
             <Input type="text" placeholder="Find..." value="" onChange={{}} />
