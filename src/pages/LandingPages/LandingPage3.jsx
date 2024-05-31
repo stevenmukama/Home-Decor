@@ -11,6 +11,7 @@ const LandingPage3 = () => {
 	return (
 		<div className=''>
 			<PageContent
+				headerTextColor='text-[#2A1F1E]'
 				title='Chroma Decor'
 				item1='Vibrant homes for every vision'
 				item2='Your ideal space is only a click away!'
