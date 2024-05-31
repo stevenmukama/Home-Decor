@@ -80,30 +80,30 @@ const Listings = () => {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
       />
-      <div className="relative flex">
-        <div className="flex flex-col items-start justify-between flex-1">
-          <div className="flex flex-col justify-between flex-1 p-12">
-            <h2 className="text-3xl font-bold">{category.name}</h2>
-            <h3 className="font-bold text-7xl">{sortedBy}</h3>
+      <div className="relative flex flex-col lg:flex-row">
+        <div className="flex flex-col items-start justify-between flex-1 p-4 lg:p-12">
+          <div className="flex flex-col justify-between flex-1">
+            <h2 className="text-2xl lg:text-3xl font-bold">{category.name}</h2>
+            <h3 className="font-bold text-4xl lg:text-7xl">{sortedBy}</h3>
           </div>
 
-          <div className="w-full py-5 text-center text-white bg-gray-900">
+          <div className="w-full py-5 text-center text-white bg-gray-900 mt-4 lg:mt-0">
             <span className="text-lg text-center">{subCateg}</span>
           </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 mt-4 lg:mt-0">
           <img
             src={category.image}
             alt={category.name}
-            className="w-fulls"
+            className="w-full h-48 lg:h-auto object-cover"
           />
         </div>
       </div>
-      <div className="flex flex-1">
+      <div className="flex flex-1 flex-col lg:flex-row">
         <Sidebar activeCategory={productCategories} />
         <main className="flex-1 p-4">
-          <div className="flex justify-end gap-8 my-12">
+          <div className="flex flex-col md:flex-row justify-end gap-4 md:gap-8 my-12">
             <Input type="text" placeholder="Find..." value="" onChange={{}} />
             <select
               name="sortby"
@@ -117,7 +117,7 @@ const Listings = () => {
               ))}
             </select>
           </div>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.products.map((product, index) => (
               <ProductCard
                 key={index}
