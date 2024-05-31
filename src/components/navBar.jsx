@@ -35,14 +35,14 @@ const NavBar = () => {
 	}, []);
 
 	return (
-		<nav className='fixed z-40 w-full max-md:w-auto'>
+		<nav className='fixed z-50 w-full max-md:w-auto'>
 			<div className='flex items-center justify-between w-full text-xs font-bold bg-white font-BelloText'>
 				<img
 					src='/decorlogo.svg'
 					className='w-auto h-auto'
 					alt='Logo'
 				/>
-				<div className='items-center justify-evenly hidden gap-6 min-[1207px]:flex'>
+				<div className='items-center justify-evenly hidden gap-6 min-[1207px]:flex pr-10'>
 					<ul className='flex gap-8'>
 						{navItems.map((item, index) => (
 							<li key={item.path}>

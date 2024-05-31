@@ -18,6 +18,7 @@ const PageContent = ({
 	bgColor1,
 	textCard1,
 	numberColor1,
+	buttonColor2,
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
@@ -33,7 +34,6 @@ const PageContent = ({
 					className='object-cover object-center w-auto h-[718.2px] rounded-full'
 				/>
 			</div>
-
 			<div className='flex gap-4'>
 				<div>
 					<h1 className='px-8 mt-4 text-3xl font-bold text-center '>
@@ -69,7 +69,7 @@ const PageContent = ({
 				{cards.map((card, index) => (
 					<div
 						key={index}
-						className='w-1/4 px-4 py-16 mb-8 text-center bg-white rounded shadow-lg'>
+						className='w-1/4 px-4 py-16 mb-8 text-center bg-white rounded-lg shadow-lg'>
 						<h2 className={`text-[36px] font-bold ${textCard1}`}>
 							{card.title}
 						</h2>
@@ -79,6 +79,10 @@ const PageContent = ({
 					</div>
 				))}
 			</div>
+			<button
+				className={`px-8 py-4 block mx-auto mt-8 ${buttonColor2}  text-white font-bold rounded w-fit`}>
+				Start Now
+			</button>{' '}
 			<div></div>
 		</div>
 	);
@@ -103,6 +107,7 @@ PageContent.propTypes = {
 	bgColor1: PropTypes.string,
 	textCard1: PropTypes.string,
 	numberColor1: PropTypes.string,
+	buttonColor2: PropTypes.string,
 };
 
 export default PageContent;
