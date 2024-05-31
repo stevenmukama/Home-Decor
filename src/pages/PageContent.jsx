@@ -16,6 +16,8 @@ const PageContent = ({
 	alt,
 	buttonColor1,
 	bgColor1,
+	textCard1,
+	numberColor1,
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
@@ -68,11 +70,16 @@ const PageContent = ({
 					<div
 						key={index}
 						className='w-1/4 px-4 py-16 mb-8 text-center bg-white rounded shadow-lg'>
-						<h2 className='text-2xl font-bold'>{card.title}</h2>
-						<p className='text-lg'>{card.content}</p>
+						<h2 className={`text-[36px] font-bold ${textCard1}`}>
+							{card.title}
+						</h2>
+						<p className={`text-[96px] font-bold ${numberColor1}`}>
+							{card.content}
+						</p>
 					</div>
 				))}
 			</div>
+			<div></div>
 		</div>
 	);
 };
@@ -94,6 +101,8 @@ PageContent.propTypes = {
 	alt: PropTypes.string,
 	buttonColor1: PropTypes.string,
 	bgColor1: PropTypes.string,
+	textCard1: PropTypes.string,
+	numberColor1: PropTypes.string,
 };
 
 export default PageContent;

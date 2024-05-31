@@ -65,11 +65,6 @@ const NavBar = () => {
 							</li>
 						))}
 					</ul>
-					<div className='flex gap-8'>
-						<div className='py-8 rounded-lg bg-slate-900' />
-						<img src='/personIcon.svg' />
-						<img src='/shoppingBagIcon.svg' />
-					</div>
 				</div>
 				<div className='flex items-center min-[1207px]:hidden'>
 					<button onClick={toggleMenu}>
@@ -91,7 +86,7 @@ const NavBar = () => {
 			</div>
 			<div
 				ref={menuRef}
-				className={`fixed top-0 left-0 w-full h-full bg-[#083201] text-white flex flex-col items-center justify-center z-50 transition-transform transform ${
+				className={`fixed top-0 left-0 w-full h-full bg-[#1F2127] text-white flex flex-col items-center justify-center z-50 transition-transform transform ${
 					isMenuOpen ? 'translate-x-0' : 'translate-x-full'
 				} min-[1207px]:hidden`}>
 				<button

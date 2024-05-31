@@ -21,6 +21,8 @@ const LandingPage1 = () => {
 				color='bg-[#1F2127]'
 				buttonColor1='bg-[#DF8C5D]'
 				bgColor1='bg-[#1F2127]'
+				textCard1='text-[#7B7979]'
+				numberColor1='text-[#CF6E37]'
 			/>
 		</div>
 	);
