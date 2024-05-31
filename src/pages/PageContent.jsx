@@ -99,6 +99,26 @@ const PageContent = ({
 					</div>
 				))}
 			</div>
+			<button
+				className={`px-8 py-4 block text-[36px] rounded-lg mb-8 mx-auto mt-8 ${buttonColor2}  text-white font-bold rounded w-fit`}>
+				<div className='flex gap-2'>
+					Shop
+					<img src='/public/arrowIcon.svg' />{' '}
+				</div>
+			</button>{' '}
+			<div className='py-8'>
+				<h1 className='text-4xl font-bold text-center'>
+					What our clients says
+				</h1>
+				<div>
+					<img src='/Vector.svg' />
+					<h1>Torem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+				</div>
+				<div>
+					<img src='/Vector.svg' />
+					<h1>Torem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+				</div>
+			</div>
 		</div>
 	);
 };
