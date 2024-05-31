@@ -6,6 +6,7 @@ const cards = [
 	{ title: 'Products', content: '10+' },
 	{ title: 'XP Years', content: '1' },
 ];
+const productImages = ['/Product1.png', '/product2.png', '/product3.png'];
 const PageContent = ({
 	title,
 	item1,
@@ -80,10 +81,24 @@ const PageContent = ({
 				))}
 			</div>
 			<button
-				className={`px-8 py-4 block mx-auto mt-8 ${buttonColor2}  text-white font-bold rounded w-fit`}>
-				Start Now
+				className={`px-8 py-4 block text-[36px] rounded-lg mb-8 mx-auto mt-8 ${buttonColor2}  text-white font-bold rounded w-fit`}>
+				see more
 			</button>{' '}
-			<div></div>
+			<h1 className='text-4xl font-bold text-center'>Featured Products</h1>
+			{/* i want that below u put three those three imges in three divs and use flex */}
+			<div className='flex gap-4 px-8 mt-8'>
+				{productImages.map((image, index) => (
+					<div
+						key={index}
+						className='flex-1'>
+						<img
+							src={image}
+							alt={`Product ${index + 1}`}
+							className='object-cover object-center w-auto h-auto'
+						/>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };
