@@ -21,6 +21,7 @@ const PageContent = ({
 	numberColor1,
 	buttonColor2,
 	bgColor2,
+	bgColor3,
 }) => {
 	return (
 		<div className='relative overflow-hidden top-20'>
@@ -107,11 +108,11 @@ const PageContent = ({
 					<img src='/public/arrowIcon.svg' />{' '}
 				</div>
 			</button>{' '}
-			<div className={`${bgColor2} py-8`}>
+			<div className={`${bgColor2} py-8 mb-8`}>
 				<h1 className='mb-8 text-4xl font-bold text-center text-white'>
 					What our clients says
 				</h1>
-				<div className='flex gap-8 text-2xl'>
+				<div className='flex gap-8 px-8 text-2xl'>
 					<div className='px-10 py-10 mx-auto text-center bg-white'>
 						<img src='/Vector.svg' />
 						<h1 className='px-6'>
@@ -123,6 +124,32 @@ const PageContent = ({
 						<h1 className='px-6'>
 							Torem ipsum dolor sit amet, consectetur adipiscing elit.
 						</h1>
+					</div>
+				</div>
+				<div className='flex justify-between'>
+					<div className='flex gap-4 px-8 mt-8 text-white'>
+						<div className={`${bgColor3} w-fit rounded-full`}>
+							<img
+								src='/public/profile-circle.svg'
+								className='w-16 p-1'
+							/>
+						</div>
+						<div className='pt-2'>
+							<h1 className='text-xl font-bold'>Desireé T.</h1>
+							<p className='text-sm'>Designer</p>
+						</div>
+					</div>
+					<div className='flex gap-4 px-8 mt-8 text-white'>
+						<div className={`${bgColor3} w-fit rounded-full`}>
+							<img
+								src='/public/profile-circle.svg'
+								className='w-16 p-1'
+							/>
+						</div>
+						<div className='pt-2'>
+							<h1 className='text-xl font-bold'>Desireé T.</h1>
+							<p className='text-sm'>Designer</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -151,6 +178,7 @@ PageContent.propTypes = {
 	numberColor1: PropTypes.string,
 	buttonColor2: PropTypes.string,
 	bgColor2: PropTypes.string,
+	bgColor3: PropTypes.string,
 };
 
 export default PageContent;
