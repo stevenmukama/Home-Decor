@@ -1,91 +1,52 @@
-const Sidebar = () => {
-	const furnitureOptions = [
-		'Decorative Accents',
-		'Poufs',
-		'Accent chairs',
-		'Ottomans',
-	];
+import products from "@/data/products";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-	const decorativeAccents = ['Clocks', 'Candles', 'Vases', 'Sculptures'];
-	const textiles = ['Curtains', 'Blinds'];
-	const wallDecor = ['wall art', 'Mirror', 'Wall shelves', 'Wall decals'];
-	return (
-		<aside className='w-96 bg-gray-50'>
-			<h2 className='px-8 py-8 mb-4 text-6xl font-semibold'>Categories</h2>
-			<div className='px-8 mb-4'>
-				<span className='text-4xl font-bold text-gray-500 hover:underline'>
-					Furniture
-				</span>
-			</div>
-			<ul>
-				{furnitureOptions.map((option) => (
-					<li
-						key={option}
-						className='px-8 py-4 font-bold text-gray-400 border-b border-gray-300 text-md'>
-						<a
-							href={`/${option.toLowerCase().replace(' ', '-')}`}
-							className='hover:underline'>
-							{option}
-						</a>
-					</li>
-				))}
-			</ul>
-			<div className='px-8 my-6'>
-				<span className='text-4xl font-bold text-red-500 hover:underline'>
-					Decorative Accents:
-				</span>
-			</div>
-			<ul>
-				{decorativeAccents.map((option) => (
-					<li
-						key={option}
-						className='px-8 py-4 font-bold text-gray-400 border-b border-gray-300 text-md'>
-						<a
-							href={`/${option.toLowerCase().replace(' ', '-')}`}
-							className='hover:underline'>
-							{option}
-						</a>
-					</li>
-				))}
-			</ul>
-			<div className='px-8 my-6'>
-				<span className='text-4xl font-bold text-gray-500 hover:underline'>
-					Textiles
-				</span>
-			</div>
-			<ul>
-				{textiles.map((option) => (
-					<li
-						key={option}
-						className='px-8 py-4 font-bold text-gray-400 border-b border-gray-300 text-md'>
-						<a
-							href={`/${option.toLowerCase().replace(' ', '-')}`}
-							className='hover:underline'>
-							{option}
-						</a>
-					</li>
-				))}
-			</ul>
-			<div className='px-8 my-6'>
-				<span className='text-4xl font-bold text-gray-500 hover:underline'>
-					Wall decor
-				</span>
-			</div>
-			<ul>
-				{wallDecor.map((option) => (
-					<li
-						key={option}
-						className='px-8 py-4 font-bold text-gray-400 border-b border-gray-300 text-md'>
-						<a
-							href={`/${option.toLowerCase().replace(' ', '-')}`}
-							className='hover:underline'>
-							{option}
-						</a>
-					</li>
-				))}
-			</ul>
-		</aside>
-	);
+const Sidebar = () => {
+  const location = useLocation();
+  const [mainCateg, setMainCateg] = useState(null);
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    setMainCateg(queryParams.get("mainCateg"));
+  }, [location]);
+  return (
+    <aside className="lg:w-96 w-64 bg-gray-50">
+      <h2 className="lg:px-8 md:px-4 px-2 py-8 mb-4 lg:text-6xl md:text-4xl text-xl font-semibold">
+        Categories
+      </h2>
+      {products.map((category) => (
+        <div key={category.name}>
+          <div className="lg:px-8 md:px-4 px-2 my-4">
+            <Link
+              className={`lg:text-4xl md:text-2xl font-bold ${
+                category.name === mainCateg ? "text-red-500" : "text-gray-500"
+              } hover:underline`}
+              to={`?mainCateg=${category.name}`}
+            >
+              {category.name}
+            </Link>
+            {category.name === mainCateg && (
+              <div className="border-b border-red-500 mt-3 relative">
+                <span className="absolute  -top-0.5 bg-red-500 w-1 h-1 rounded-full block"></span>
+              </div>
+            )}
+          </div>
+          <ul className="flex flex-col">
+            {category.options.map((option) => (
+              <Link
+                key={option}
+                className="lg:px-8 md:px-4 py-4 font-bold text-gray-400 border-b border-gray-300 text-md hover:underline"
+                to={`?mainCateg=${category.name}&subCateg=${option}`}
+              >
+                {option}
+              </Link>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </aside>
+  );
 };
 
 export default Sidebar;
