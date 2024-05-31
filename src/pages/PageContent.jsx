@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const PageContent = ({
 	title,
 	item1,
-	nextPage,
 	imageProp,
 	color,
 	item2,
@@ -19,15 +18,11 @@ const PageContent = ({
 				<p className='mb-4 text-xl text-white'>{item2}</p>
 			</div>
 			<div className='absolute right-0 top-3'>
-				<Link
-					to={nextPage}
-					className='cursor-pointer'>
-					<img
-						src={imageProp}
-						alt={alt}
-						className='object-cover object-center rounded-full w-96 h-96'
-					/>
-				</Link>
+				<img
+					src={imageProp}
+					alt={alt}
+					className='object-cover object-center rounded-full w-96 h-96'
+				/>
 			</div>
 
 			<div className='flex gap-4 mt-8'>
